@@ -1,2 +1,13 @@
 <h3>{{titulo}}</h3>
 <hr>
+<div *ngIf="!productos">
+    Cargando listado de productos...
+</div>
+<div *ngIf="productos">
+    <ul>
+        <li *ngFor="let producto of productos">
+            <strong>{{producto.nombre}}</strong>
+            <p>{{producto.precio}} $</p>
+        </li>
+    </ul>
+</div>
