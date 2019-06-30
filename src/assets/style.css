@@ -66,3 +66,6 @@ margin-left: 10px;
     padding-top: 10px;
     color: gray;
 }
+#formProductos label{
+    margin-top: 10px;
+}
