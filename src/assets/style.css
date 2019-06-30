@@ -47,8 +47,16 @@
     text-decoration: none;
     background-color: #E03137;
 }
+#main .jumbotron{
+    padding:50px;
+    margin-top:30px; 
+    border-radius: 5px;
+}
+.btn{
+margin-left: 10px;
+}
 #footer{
-    margin-top: 50px;
+    margin-top: 30px;
     border-top: 1px solid #eee;
     padding-top: 10px;
     color: gray;
