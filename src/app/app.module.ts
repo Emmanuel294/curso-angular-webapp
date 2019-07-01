@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home.component';
 import { ErrorComponent } from './components/error.component';
 import { ProductosListComponent } from './components/productos-list.component';
 import { ProductoAddComponent } from './components/producto-add.component';
+import { ProductoDetailComponent } from './components/prducto-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProductoAddComponent } from './components/producto-add.component';
     HomeComponent,
     ErrorComponent,
     ProductosListComponent,
-    ProductoAddComponent
+    ProductoAddComponent,
+    ProductoDetailComponent
   ],
   imports: [
     BrowserModule,

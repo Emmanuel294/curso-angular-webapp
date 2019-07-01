@@ -6,15 +6,15 @@ import { Producto } from '../models/producto';
 
 @Component({
     selector: 'producto-detalle',
-    templateUrl: '../views/producto-detail.html',
+    templateUrl: './views/producto-detail.html',
     providers: [ProductoService]
 })
-export class ProductoDetalleComponent{
+export class ProductoDetailComponent{
     public producto:Producto;
 
     constructor(
         private _productoService:ProductoService,
-        private _route:ActivatedRpute,
+        private _route:ActivatedRoute,
         private _router:Router 
     ){
 
@@ -22,5 +22,23 @@ export class ProductoDetalleComponent{
     
     ngOnInit(){
         console.log('producto-detail.component.ts cargado');
+        this.getProducto();
+    }
+
+    getProducto(){
+        this._route.params.forEach((params:Params) =>{
+            let id = params['id'];
+            this._productoService.getProductoId(id).subscribe(
+                result =>{
+                    if(result.code == 200){
+                        this.producto = result.data;
+                    }else{
+                        this._router.navigate(['/productos']);
+                    }
+                },error => {
+                    console.log(error);
+                }
+            );
+        });
     }
 }

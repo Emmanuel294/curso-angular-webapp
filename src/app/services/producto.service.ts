@@ -21,6 +21,10 @@ export class ProductoService{
         return this._http.get(this.url+'productos');
     }
 
+	getProductoId(id){
+		return this._http.get(this.url+"productos/"+id);
+	}
+
     addProducto(producto){
         let json= JSON.stringify(producto);
         let params = 'json='+json;
