@@ -65,6 +65,6 @@ export class ProductoService{
 	}
 
 	deleteProduct(id){
-		return this._http.get(this.url+'delete');
+		return this._http.get(this.url+'delete_producto/'+id);
 	}
 }
