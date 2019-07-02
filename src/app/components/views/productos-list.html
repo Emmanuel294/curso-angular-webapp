@@ -19,7 +19,7 @@
                     <p>{{producto.precio}} $</p>
                     <p>
                         <a [routerLink]="['/producto',producto.id]" class="btn btn-md btn-primary">Ver</a>
-                        <a href="#" class="btn btn-md btn-warning">Editar</a>
+                        <a [routerLink]="['/editar-producto',producto.id]"class="btn btn-md btn-warning">Editar</a>
                         <a href="#" class="btn btn-md btn-danger">Borrar</a>
                     </p>
                 </div>
